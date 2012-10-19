@@ -4,7 +4,7 @@ $:.unshift File.join(File.dirname(Pathname.new($0).realpath.to_s), 'lib')
 require 'cssette'
 
 def concatenate_css(to, stuff, from_file)
-	file_comment = "\n\n/*\t#{from_file.split("style")[1]}\t*/\n"
+	file_comment = "\n\n/*\t#{from_file}\t*/\n"
 	to += file_comment + stuff + "\n" unless stuff.strip == ""
 	to
 end
@@ -12,7 +12,7 @@ end
 compact = ""
 tablet = ""
 css_dir = "webapp/static/style/sharedmodules"
-css_files = Dir.glob("#{css_dir}/*.css")
+css_files = Dir.glob("**/*.css")
 
 css_files.each { |filename| 
 	puts "parsing #{filename}"

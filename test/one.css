@@ -1,0 +1,23 @@
+/* This is a test stylesheet to exercise my splitter */
+body {font-family:sans-serif;}
+@media screen and (min-width:600px) {
+  body{font-family:serif;}
+}                        
+          @media screen and (min-width:700px){
+            body{font-family:monospace;
+}}
+
+@media screen and (max-width:900px) and  (min-width:501px) {
+    body{color:red;}
+}  
+
+@media screen
+and (min-width:300px) {
+  body{background:yellow;}
+}
+
+
+@media screen
+and (min-width:700px) {
+  body{background:blue;}
+}
